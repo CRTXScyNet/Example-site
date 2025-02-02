@@ -8,6 +8,7 @@
     <meta name="description" content="Hi, I'm TenixOrtec, and this cite is about myself. Check it. It's worth it.">
     <meta name="keywords" content="Tenix Ortec, TenixOrtec, programming, frontend,backend">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
 </head>
 
 <body>
@@ -16,10 +17,20 @@
         <div>
             <H1>TenixOrtec</H1>
             <p><strong>Мечтающий</strong> разработчик <em>всего</em>!</p>
+
+            <div>
+                <h2>Social links</h2>
+                <a href="https://www.instagram.com/tenixortec" target="_blank"><img src="img/Instagram_icon.png"
+                        alt="My instagram" class="image-link"></a>
+                <a href="https://t.me/tenixortec" target="_blank"><img src="img/Telegram_icon.svg" alt="My telegram"
+                        class="image-link"></a>
+                <a href="https://kwork.ru/user/tenixortec" target="_blank"><img src="img/kwork-icon.png" alt="My Kwork"
+                        class="image-link"></a>
+            </div>
         </div>
     </header>
     <main>
-        <div>
+        <div id="hobby">
             <h2>My hobbies</h2>
             <ul>
                 <li>Games</li>
@@ -55,14 +66,14 @@
                 </tr>
             </table>
         </div>
-        <div>
-            <form id="feedback">
-                <label for="feedback"><strong>Contact me</strong></label>
+    </main>
+    <footer>
+        <div id="feedback">
+            <form id="feedback-form">
+                <label for="feedback-form"><strong>Contact me</strong></label>
                 <div>
                     <label for="name">Name</label>
                     <input type="text" name="" id="name">
-                </div>
-                <div>
                     <label for="email">Email</label>
                     <input type="email" name="" id="email">
                 </div>
@@ -72,26 +83,11 @@
                 <button type="submit">Send</button>
             </form>
         </div>
-
-    </main>
-
-    <br><br><br>
-    <footer>
-
-        <div>
-            <h2>Social links</h2>
-            <a href="https://www.instagram.com/tenixortec" target="_blank"><img src="img/Instagram_icon.png"
-                    alt="My instagram" width="20"></a>
-            <a href="https://t.me/tenixortec" target="_blank"><img src="img/Telegram_icon.svg" alt="My telegram"
-                    width="20"></a>
-            <a href="https://kwork.ru/user/tenixortec" target="_blank"><img src="img/kwork-icon.png" alt="My Kwork"
-                    width="20"></a>
+        <div id="side-sites">
+            <a href="side-sites/forms.html">Forms</a> <a href="side-sites/inline_block.html">Inline-block</a> <a
+                href="side-sites/cite.html">Cite</a>
         </div>
     </footer>
-    <div>
-        <a href="side-sites/forms.html">Forms</a> <a href="side-sites/inline_block.html">Inline-block</a> <a href="side-sites/Site.html">Cite</a>
-    </div>
-    </div>
-</body>
+
 
 </html>

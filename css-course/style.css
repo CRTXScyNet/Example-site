@@ -7,16 +7,16 @@ body {
 padding: 10px;
 background-color: #fff;
 /* margin-bottom: 10px; */
-color: white;
+
 }
 .card p {
     font-size: 14px;
 }
 .html{
-    background-color: orange;
+    background-color: #c64d24;
 }
 .css {
-    background-color: blue;
+    background-color: #1d31c8;
 }
 
 
