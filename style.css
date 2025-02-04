@@ -7,6 +7,13 @@ body {
   background-color: #7edbce;
   color: #001691;
 }
+.container {
+  border: 2px solid blue;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
 header {
   display: flex;
   justify-content: space-evenly;
@@ -28,6 +35,22 @@ header > div {
   width: 300px;
   border-left: 10px solid #6a9abb;
   border-right: 10px solid #6a9abb;
+}
+.eyes {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #5c3515;
+  box-shadow: 0 0 5px 5px #e7341c;
+}
+#eye-1 {
+  left: 32%;
+  top: 42%;
+}
+#eye-2 {
+  left: 66%;
+  top: 40.6%;
 }
 header p {
   margin-top: 0;
@@ -83,24 +106,24 @@ th {
   border-radius: 5px;
   margin-bottom: 5px;
   margin-right: 5px;
-  background-color: #7edbce;
+  background-color: #69bdb2;
   border-style: solid;
   border-color: #72b8bb;
 }
 #feedback-form textarea {
   resize: none;
   border-radius: 5px;
-  background-color: #7edbce;
+  background-color: #69bdb2;
   border-style: solid;
   border-color: #72b8bb;
-  /* width: 100%; */
 }
 #feedback-form button {
   font-size: large;
   padding: 10px;
+  margin: 5px;
   width: 50%;
   border-style: solid;
-  background-color: #7edbce;
+  background-color: #69bdb2;
   border-color: #72b8bb;
 }
 footer {
@@ -130,7 +153,6 @@ a {
   text-decoration: none;
   color: black;
   transition: all 0.2s ease-in-out;
-
 }
 #side-sites a:visited {
   color: #ddd;
