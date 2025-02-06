@@ -4,14 +4,44 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #7edbce;
+  /* background-color: #7edbce; */
+  background-color: #111;
   color: #001691;
 }
+.card {
+  position: relative;
+  z-index: 5;
+  border-radius: 20px;
+  background-color: #2b9dbf;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.nav li {
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+  width: auto;
+}
+.nav li:hover {
+  background-color: rgb(248, 248, 129);
+}
+.nav a {
+  padding: 15px;
+}
+
 .container {
-  border: 2px solid blue;
+  border: 2px solid rgb(85, 85, 218);
   max-width: 1000px;
   margin: auto;
   padding: 30px;
+  border-radius: 20px;
 }
 header {
   display: flex;
@@ -25,30 +55,64 @@ header > div {
   flex-direction: column;
   justify-content: center;
 
-  border-radius: 20px;
-  background-color: #2b9dbf;
   text-align: center;
   padding: 20px;
 }
 #avatar {
-  width: 300px;
-
+  width: 450px;
 }
+.eye {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  /* border: 5px solid black; */
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  background: radial-gradient(circle at 50%,#111, #111 40%, #eee 60%, #111 70%);
+  z-index: 1;
+  scale: .2;
+}
+.eyes-around,
 .eyes {
   position: relative;
-  width: 5px;
-  height: 5px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: #5c3515;
-  box-shadow: 0 0 5px 5px #e7341c;
+  background: url(https://media.tenor.com/wR983dpB_GsAAAAM/blue-spiral.gif);
+  opacity: 0.9;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 10px 10px #e7341c;
 }
 #eye-1 {
-  left: 32%;
-  top: 42%;
+  left: 31.4%;
+  top: 43%;
 }
 #eye-2 {
-  left: 66%;
+  left: 65%;
   top: 40.6%;
+}
+.eyes-around {
+  top: 35%;
+  left: 35%;
+  box-shadow: 0 0 10px 10px #111;
+}
+#social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#social-links li {
+  margin-top: 25px;
+}
+.image-link {
+  width: 100px;
+  transition: all 0.2s ease-in-out;
+}
+.image-link:hover {
+  scale: 1.5;
 }
 header p {
   margin-top: 0;
@@ -57,39 +121,31 @@ main {
   border-radius: 10px;
   margin: 10px;
 
-
   margin-bottom: 20px;
 }
 table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  border-radius: 20px;
-  background-color: #2b9dbf;
-  padding: 20px;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: space-between;a= */
+  /* align-content: space-between; */
+  width: 100%;
 }
 td,
 th {
-  border: 2px solid black;
+  border: 2px solid rgb(43, 43, 43);
   border-radius: 10px;
+  text-align: center;
 }
-.image-link {
-  width: 30px;
-  transition: all 0.2s ease-in-out;
+#hobby h2 {
+  text-align: center;
+  border-bottom: 2px solid #0e6763;
+
+  padding-bottom: 15px;
 }
-.image-link:hover {
-  scale: 1.5;
+#hobby h3 {
+  text-align: center;
 }
-#hobby {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  border-radius: 20px;
-  background-color: #2b9dbf;
-  margin-bottom: 10px;
-}
+
 #feedback {
   display: flex;
   justify-content: center;
@@ -99,10 +155,6 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border-radius: 20px;
-  background-color: #2b9dbf;
-  padding: 20px;
 }
 #feedback-form > label {
   font-size: 30px;
@@ -130,14 +182,13 @@ th {
   border-style: solid;
   background-color: #69bdb2;
   border-color: #72b8bb;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-radius: 5px;
   font: inherit;
 }
 #feedback-form button:hover {
-  color:white;
+  color: white;
   background-color: #001691;
-  
 }
 footer {
   margin: auto;
@@ -155,10 +206,6 @@ footer {
   align-items: center;
   gap: 14px;
   font-size: 25px;
-
-  border-radius: 20px;
-  background-color: #2b9dbf;
-  padding: 20px;
 }
 a {
   list-style: none;
@@ -173,6 +220,7 @@ a {
   text-shadow: #7edbce 0 0 10px;
   scale: 1.5;
 }
-a, button {
+a,
+button {
   cursor: pointer;
 }
