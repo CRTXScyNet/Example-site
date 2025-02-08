@@ -59,6 +59,7 @@ header > div {
   padding: 20px;
 }
 #avatar {
+  position: relative;
   width: 450px;
 }
 .eye {
@@ -75,7 +76,7 @@ header > div {
 }
 .eyes-around,
 .eyes {
-  position: relative;
+  position: absolute;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -87,11 +88,11 @@ header > div {
   box-shadow: 0 0 10px 10px #e7341c;
 }
 #eye-1 {
-  left: 31.4%;
-  top: 43%;
+  left: 33%;
+  top: 40.6%;
 }
 #eye-2 {
-  left: 65%;
+  left: 63.5%;
   top: 40.6%;
 }
 .eyes-around {
