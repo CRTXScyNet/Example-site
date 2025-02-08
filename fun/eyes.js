@@ -22,6 +22,8 @@ for (let i = 0; i < 30; i++) {
 
 const leftEye = document.getElementById("eye-1");
 const rightEye = document.getElementById("eye-2");
+const madnessAva = document.getElementById('avatar').getElementsByTagName('img')[0]
+
 // const eyesAround = document.getElementsByClassName("eyes-around");
 
 window.addEventListener("mousemove", (e) => {
@@ -32,6 +34,12 @@ window.addEventListener("mousemove", (e) => {
   let rightEyeBoundingRect = rightEye.getBoundingClientRect();
   let rightPosX = rightEyeBoundingRect.x + rightEyeBoundingRect.width / 2;
   let rightPosY = rightEyeBoundingRect.y;
+
+  let eyesWidth = madnessAva.getBoundingClientRect().width/20
+  leftEye.style.width = `${eyesWidth}px`
+  leftEye.style.height = `${eyesWidth}px`
+  rightEye.style.width = `${eyesWidth}px`
+  rightEye.style.height = `${eyesWidth}px`
 
   leftEye.style.transform = `translate(${getEyeCoords(
     e.clientX - leftPosX

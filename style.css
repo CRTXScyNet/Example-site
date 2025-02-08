@@ -50,17 +50,19 @@ header {
   margin: 10px;
   margin-bottom: 20px;
 }
-header > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-  text-align: center;
-  padding: 20px;
-}
 #avatar {
   position: relative;
   width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+#avatar img {
+  width: auto;
 }
 .eye {
   width: 60px;
@@ -70,9 +72,15 @@ header > div {
   border-radius: 50%;
   top: 10%;
   left: 10%;
-  background: radial-gradient(circle at 50%,#111, #111 40%, #eee 60%, #111 70%);
+  background: radial-gradient(
+    circle at 50%,
+    #111,
+    #111 40%,
+    #eee 60%,
+    #111 70%
+  );
   z-index: 1;
-  scale: .2;
+  scale: 0.2;
 }
 .eyes-around,
 .eyes {
@@ -100,12 +108,17 @@ header > div {
   left: 35%;
   box-shadow: 0 0 10px 10px #111;
 }
-#social-links ul {
+#social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#social-links-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#social-links li {
+#social-links-list li {
   margin-top: 25px;
 }
 .image-link {
@@ -224,4 +237,48 @@ a {
 a,
 button {
   cursor: pointer;
+}
+@media (max-width: 830px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header > div {
+    width: 100%;
+  }
+  #social-links {
+    text-align: center;
+  }
+  #social-links-list ul {
+    display: flex;
+    gap: 15px;
+  }
+  #social-links-list li {
+    margin-top: 0;
+  }
+}
+@media (max-width: 700px) {
+  #avatar {
+    width: auto;
+  }
+  .eyes {
+    transform: scale(0.5);
+  }
+  footer {
+    flex-direction: column;
+  }
+  #feedback-form > div {
+    /* display: flex;
+    flex-direction: column; */
+  }
+  .image-link{
+    width: 50px;
+  }
+  .nav {
+    justify-content: space-evenly;
+  }
+  .nav li {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
 }
