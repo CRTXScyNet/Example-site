@@ -1,31 +1,48 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
 }
 body {
   margin: 0;
   padding: 0;
   /* background-color: #7edbce; */
-  background-color: #111;
   color: #001691;
+}
+#background {
+  background: linear-gradient(1600deg, #111, rgb(0, 119, 255)) ;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 .card {
   position: relative;
-  z-index: 5;
+  z-index: 2;
   border-radius: 20px;
-  background-color: #2b9dbf;
+  /* background-color: #2b9dbf; */
   padding: 20px;
   margin-bottom: 10px;
+  border: 4px solid #00ffff5c;
 }
 
 .nav {
+  z-index: 3;
+  position: sticky;
+  top: 10px;
   list-style: none;
   display: flex;
   padding: 0;
   margin: 0;
   overflow: hidden;
+  border-style: double;
+  border-color: aqua;
+  border-width: 4px;
+  outline: 3px solid rgb(142, 255, 255);
+  background-color: #2b9dbf;
 }
 .nav li {
   padding: 15px;
+  padding-inline: 0;
   transition: all 0.2s ease-in-out;
   width: auto;
 }
@@ -34,6 +51,7 @@ body {
 }
 .nav a {
   padding: 15px;
+  padding-inline: 30px;
 }
 
 .container {
@@ -50,16 +68,20 @@ header {
   margin: 10px;
   margin-bottom: 20px;
 }
-header > div {
+
+
+#avatar {
+  position: relative;
+  width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  margin: auto;
   text-align: center;
   padding: 20px;
 }
-#avatar {
-  width: 450px;
+#avatar img {
+  width: auto;
 }
 .eye {
   width: 60px;
@@ -69,29 +91,39 @@ header > div {
   border-radius: 50%;
   top: 10%;
   left: 10%;
-  background: radial-gradient(circle at 50%,#111, #111 40%, #eee 60%, #111 70%);
+  background: radial-gradient(
+    circle at 50%,
+    #111,
+    #111 40%,
+    #eee 60%,
+    rgba(0,0,0,0) 70%
+  );
   z-index: 1;
-  scale: .2;
+  scale: 0.2;
+  mix-blend-mode:lighten;
+}
+.eyes {
+  mix-blend-mode: luminosity;
 }
 .eyes-around,
 .eyes {
-  position: relative;
+  position: absolute;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #5c3515;
-  background: url(https://media.tenor.com/wR983dpB_GsAAAAM/blue-spiral.gif);
+  /* background: #5c3515; */
+  background: url('img/blue-spiral.gif');
   opacity: 0.9;
   background-position: center;
   background-size: cover;
   box-shadow: 0 0 10px 10px #e7341c;
 }
 #eye-1 {
-  left: 31.4%;
-  top: 43%;
+  left: 33%;
+  top: 40.6%;
 }
 #eye-2 {
-  left: 65%;
+  left: 63.5%;
   top: 40.6%;
 }
 .eyes-around {
@@ -99,12 +131,17 @@ header > div {
   left: 35%;
   box-shadow: 0 0 10px 10px #111;
 }
-#social-links ul {
+#social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#social-links-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#social-links li {
+#social-links-list li {
   margin-top: 25px;
 }
 .image-link {
@@ -144,17 +181,25 @@ th {
 }
 #hobby h3 {
   text-align: center;
+  
 }
-
 #feedback {
   display: flex;
   justify-content: center;
 }
-#feedback-form {
-  /* margin-top: 15px; */
-  display: flex;
+#feedback h3 {
+  text-align: center;
+  font-size: 32px;
+}
+#feedback-form>div {
+display: flex;
+justify-content: space-between;
+}
+.feedback-input {
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  width: 45%;
+  margin-bottom: 10px;
 }
 #feedback-form > label {
   font-size: 30px;
@@ -162,22 +207,37 @@ th {
 #feedback-form input {
   border-radius: 5px;
   margin-bottom: 5px;
-  margin-right: 5px;
-  background-color: #69bdb2;
+  /* margin-right: 5px; */
+  background-color: #396d8b;
   border-style: solid;
   border-color: #72b8bb;
+  color: white;
+  font: inherit;
+  outline: none;
+}
+#feedback-form input::placeholder {
+  color: rgba(255, 255, 255, 0.479);
 }
 #feedback-form textarea {
-  resize: none;
+  resize:none;
+  width: 100%;
   border-radius: 5px;
-  background-color: #69bdb2;
+  background-color: #396d8b;
   border-style: solid;
   border-color: #72b8bb;
+  color: white;
+  font: inherit;
+  outline: none;
+}
+#feedback-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.479);
 }
 #feedback-form button {
+  display: block;
   font-size: large;
   padding: 10px;
   margin: 5px;
+  margin-inline: auto;
   width: 50%;
   border-style: solid;
   background-color: #69bdb2;
@@ -188,24 +248,13 @@ th {
 }
 #feedback-form button:hover {
   color: white;
-  background-color: #001691;
+  background-color: #045fc8;
 }
 footer {
   margin: auto;
-  display: flex;
-  justify-content: center;
-  gap: 25%;
   margin: 10px;
   margin-bottom: 20px;
   overflow: hidden;
-}
-#side-sites {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  font-size: 25px;
 }
 a {
   list-style: none;
@@ -213,14 +262,85 @@ a {
   color: black;
   transition: all 0.2s ease-in-out;
 }
-#side-sites a:visited {
-  color: #ddd;
-}
-#side-sites a:hover {
-  text-shadow: #7edbce 0 0 10px;
-  scale: 1.5;
-}
 a,
 button {
   cursor: pointer;
+}
+.color-0, .color-1 {
+  background: linear-gradient(to right bottom,#2b9dbf, #2b7f99 );
+}
+.color-2 {
+  background: linear-gradient(to right bottom,#2b7f99, #2f8ba7, #2b7f99 );
+}
+.color-3 {
+  background: linear-gradient(to right bottom, #2b7f99, #2b9dbf );
+
+}
+.color-4 {
+  background: linear-gradient(to right bottom,#2c8fad, #2b92b1 );
+}
+
+
+@media (max-width: 830px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header > div {
+    width: 100%;
+  }
+  #social-links {
+    text-align: center;
+  }
+  #social-links-list ul {
+    display: flex;
+    gap: 15px;
+  }
+  #social-links-list li {
+    margin-top: 0;
+  }
+  #feedback-form>div {
+    display: block;
+  }
+  .feedback-input{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  /* .feedback-input input {
+    width: 100%;
+  } */
+}
+@media (max-width: 700px) {
+  #avatar {
+    width: auto;
+  }
+  .eyes {
+    transform: scale(0.5);
+  }
+
+  .image-link{
+    width: 50px;
+  }
+  .nav {
+    justify-content: space-evenly;
+  }
+  .nav li {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  
+}
+@media (max-width: 600) {
+  #hobby p{
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .nav li{
+    font-size: 10px;
+  }
+ tr {
+    font-size: 10px;
+  }
 }

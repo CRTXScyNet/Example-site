@@ -12,37 +12,41 @@
 </head>
 
 <body>
+    <div id="background"></div>
     <div class="container">
+
         <ul class="card nav">
             <li><a href="#avatar" target="_self" rel="noopener noreferrer">HEADER</a></li>
             <li><a href="#hobby" target="_self" rel="noopener noreferrer">MAIN</a></li>
             <li><a href="#feedback" target="_self" rel="noopener noreferrer">FOOTER</a></li>
         </ul>
         <header>
-            <div id="avatar" class="card">
-                <div class="eyes" id="eye-1"></div>
-                <div class="eyes" id="eye-2"></div>
-                <img src="img/mednessavaToTheApk2.png" alt="avatar">
+            <div  class="card color-0">
+                <div id="avatar" >
+                    <div class="eyes" id="eye-1"></div>
+                    <div class="eyes" id="eye-2"></div>
+                    <img src="img/mednessavaToTheApk2.png" alt="avatar">
+                </div>
             </div>
-            <div class="card">
+            <div id="social-links" class="card color-1">
                 <H1>TenixOrtec</H1>
-                <p><strong>Мечтающий</strong> разработчик <em>всего</em>!</p>
+                <p><strong>Dreaming</strong> developer of <em>everything</em>!</p>
 
-                <div id="social-links">
+                <div id="social-links-list">
                     <h2>Social links</h2>
                     <ul>
-                        <li><a href="https://www.instagram.com/tenixortec" target="_blank"><img src="img/Instagram_icon.png"
-                                alt="My instagram" class="image-link"></a></li>
+                        <li><a href="https://www.instagram.com/tenixortec" target="_blank"><img
+                                    src="img/Instagram_icon.png" alt="My instagram" class="image-link"></a></li>
                         <li><a href="https://t.me/tenixortec" target="_blank"><img src="img/Telegram_icon.svg"
-                                alt="My telegram" class="image-link"></a></li>
+                                    alt="My telegram" class="image-link"></a></li>
                         <li><a href="https://kwork.ru/user/tenixortec" target="_blank"><img src="img/kwork-icon.png"
-                                alt="My Kwork" class="image-link"></a></li>
+                                    alt="My Kwork" class="image-link"></a></li>
                     </ul>
                 </div>
             </div>
         </header>
         <main>
-            <div class="card">
+            <div class="card color-2">
                 <div id="hobby">
                     <h2>My hobbies</h2>
                     <div>
@@ -106,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card color-3">
                 <table>
                     <thead>
                         <tr>
@@ -134,30 +138,24 @@
             </div>
         </main>
         <footer>
-            <div id="feedback" class="card">
+            <div id="feedback" class="card color-4">
                 <form id="feedback-form" name="feedback-form">
                     <h3><strong>Contact me</strong></h3>
                     <div>
-                        <div>
+                        <div class="feedback-input">
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name" autocomplete="on" placeholder="Your name">
                         </div>
-                        <div>
+                        <div class="feedback-input">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" autocomplete="on" placeholder="Your email">
                         </div>
                     </div>
                     <div>
-                        <textarea name="" id="message" placeholder="Your message" cols="30" rows="10"></textarea>
+                        <textarea name="" id="message" placeholder="Your message" cols="90" rows="10"></textarea>
                     </div>
                     <button type="submit">Send</button>
                 </form>
-            </div>
-
-            <div id="side-sites" class="card">
-                <h4>Other pages</h4>
-                <a href="side-sites/forms.html">Forms</a> <a href="side-sites/inline_block.html">Inline-block</a> <a
-                    href="side-sites/cite.html">Cite</a>
             </div>
         </footer>
     </div>
