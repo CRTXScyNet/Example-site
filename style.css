@@ -213,13 +213,17 @@ th {
   /* margin-right: 5px; */
   background-color: #396d8b;
   border-style: solid;
-  border-color: #72b8bb;
+  border-color: #72b8bb00;
   color: white;
   font: inherit;
   outline: none;
+  transition: all .2s ease-in-out;
 }
 #feedback-form input::placeholder {
   color: rgba(255, 255, 255, 0.479);
+}
+#feedback-form input:focus {
+  border-color: #72b8bb;
 }
 #feedback-form textarea {
   resize: none;
@@ -227,13 +231,17 @@ th {
   border-radius: 5px;
   background-color: #396d8b;
   border-style: solid;
-  border-color: #72b8bb;
+  border-color: #72b8bb00;
   color: white;
   font: inherit;
   outline: none;
+  transition: all .2s ease-in-out;
 }
 #feedback-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.479);
+}
+#feedback-form textarea:focus {
+  border-color: #72b8bb;
 }
 #feedback-form button {
   display: block;
